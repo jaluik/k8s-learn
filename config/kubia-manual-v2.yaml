@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual-v2
+  labels:
+    creation_method: manual # 创建了creation_method = manual标签
+    env: prod # 创建了env = prod标签
+spec:
+  containers:
+    - image: jaluik/kubia
+      name: kubia
+      ports:
+        - containerPort: 8080
+          protocol: TCP
